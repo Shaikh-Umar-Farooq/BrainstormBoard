@@ -4,10 +4,20 @@ import { useLocation } from 'react-router-dom';
 
 function Tab() {
   const location = useLocation();
-  const [activeTab, setActiveTab] = useState(location.hash === '#new' ? 0 : 1);
+  const [activeTab, setActiveTab] = useState(() => {
+    if (location.hash === '#new') return 0;
+    if (location.hash === '#top') return 1;
+    return 0; // Default to top ideas if no hash is present
+  });
 
   useEffect(() => {
-    setActiveTab(location.hash === '#new' ? 0 : 1);
+    if (location.hash === '#new') {
+      setActiveTab(0);
+    } else if (location.hash === '#top') {
+      setActiveTab(1);
+    } else {
+      setActiveTab(0); // Default to top ideas if no hash is present
+    }
   }, [location.hash]);
 
   return (
