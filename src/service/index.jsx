@@ -40,9 +40,9 @@ export const downvote=(id)=>{
 
 export const checkisalreadyupvoted=(id)=>{
     const votes=JSON.parse(localStorage.getItem('votes'))
-    return votes.upvote.find(item=>item==id);
+    return votes?.upvote?.find(item=>item==id);
 }
 export const checkisalreadydownvoted=(id)=>{
     const votes=JSON.parse(localStorage.getItem('votes'))
-    return votes.downvote.find(item=>item==id);
+    return votes?.downvote?.find(item=>item==id);
 }
