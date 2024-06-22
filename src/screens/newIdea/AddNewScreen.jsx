@@ -42,7 +42,7 @@ function AddNewScreen() {
   }
 
   return (
-    <div>
+    <div  className=' h-screen' >
       <Header />
 
       {showalert&&<div role="alert" className="alert alert-success mt-5 shadow-lg">
@@ -75,6 +75,7 @@ function AddNewScreen() {
         List my Idea
 
       </button>
+     
 
     </div>
   )
