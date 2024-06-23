@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className='flex flex-row justify-between items-center shadow-sm p-4 border rounded-lg'>
       <div className='flex gap-2 items-center'>
-        <img src={logo} className='sm:w-20 sm:h-20 w-15 h-15' alt='logo' />
+        <img src={logo} className='sm:w-20 sm:h-20 w-14 h-14' alt='logo' />
       </div>
       <h2 className='font-bold text-sm md:text-3xl'>Brainstorm Board</h2>
       {!isOnNewPage ? (
