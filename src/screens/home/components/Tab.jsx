@@ -31,7 +31,9 @@ function Tab() {
         href="/#new"
         className={`tab text-lg font-bold ${activeTab === 0 && 'tab-active'}`}
       >
-        <Sparkle className='w-4 h-4' /> &nbsp; New Ideas
+        <Sparkle className='w-4 h-4' /> &nbsp; 
+        <span className="hidden sm:inline">New Ideas</span>
+        <span className="sm:hidden">New</span>
       </a>
       <a
         onClick={() => setActiveTab(1)}
@@ -39,7 +41,9 @@ function Tab() {
         href="/#top"
         className={`tab text-lg font-bold ${activeTab === 1 && 'tab-active'}`}
       >
-        <Trophy className='w-4 h-4' /> &nbsp; Top Ideas
+        <Trophy className='w-4 h-4' /> &nbsp; 
+        <span className="hidden sm:inline">Top Ideas</span>
+        <span className="sm:hidden">Top</span>
       </a>
       <a
         onClick={() => setActiveTab(2)}
@@ -47,7 +51,9 @@ function Tab() {
         href="/#my"
         className={`tab text-lg font-bold ${activeTab === 2 && 'tab-active'}`}
       >
-        <User className='w-4 h-4' /> &nbsp; My Ideas
+        <User className='w-4 h-4' /> &nbsp; 
+        <span className="hidden sm:inline">My Ideas</span>
+        <span className="sm:hidden">Listed</span>
       </a>
     </div>
   );
