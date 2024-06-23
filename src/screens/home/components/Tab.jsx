@@ -1,4 +1,4 @@
-import { Sparkle, Trophy } from 'lucide-react';
+import { Sparkle, Trophy, User } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -7,7 +7,8 @@ function Tab() {
   const [activeTab, setActiveTab] = useState(() => {
     if (location.hash === '#new') return 0;
     if (location.hash === '#top') return 1;
-    return 0; // Default to top ideas if no hash is present
+    if (location.hash === '#my') return 2;
+    return 0; // Default to new ideas if no hash is present
   });
 
   useEffect(() => {
@@ -15,8 +16,10 @@ function Tab() {
       setActiveTab(0);
     } else if (location.hash === '#top') {
       setActiveTab(1);
+    } else if (location.hash === '#my') {
+      setActiveTab(2);
     } else {
-      setActiveTab(0); // Default to top ideas if no hash is present
+      setActiveTab(0); // Default to new ideas if no hash is present
     }
   }, [location.hash]);
 
@@ -37,6 +40,14 @@ function Tab() {
         className={`tab text-lg font-bold ${activeTab === 1 && 'tab-active'}`}
       >
         <Trophy className='w-4 h-4' /> &nbsp; Top Ideas
+      </a>
+      <a
+        onClick={() => setActiveTab(2)}
+        role="tab"
+        href="/#my"
+        className={`tab text-lg font-bold ${activeTab === 2 && 'tab-active'}`}
+      >
+        <User className='w-4 h-4' /> &nbsp; My Ideas
       </a>
     </div>
   );
