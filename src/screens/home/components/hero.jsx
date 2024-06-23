@@ -6,7 +6,7 @@ function hero() {
   return (
     <div className='my-10 flex flex-col items-center gap-5'>
         <h2 className='text-2xl font-bold text-center '>Discover, Share, and Vote on Ideas Freely.</h2>
-        <h2 className=' text-sm font-normal text-center text-gray-400 '>Discover Brainstorm Board, a platform dedicated to the free exchange of ideas. List your innovative project or startup concepts, explore ideas from other users, and cast your votes anonymously. Our goal is to create a collaborative space where ideas can grow and improve through community input, all without the need for account creation.</h2>
+        <h2 className=' text-sm font-normal text-center text-gray-400 '>Discover Brainstorm Board, a platform dedicated to the free exchange of ideas. List your innovative project or startup concepts, explore ideas from other users, and cast your votes anonymously. My goal is to create a collaborative space where ideas can grow and improve through community input, all without the need for account creation.</h2>
     
     <div>
 
